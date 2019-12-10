@@ -14,19 +14,19 @@ namespace Delphinus_Yachts.Domain.Services
             _userManager = userManager;
         }
 
-        public bool Create(LoginModel model)
+        public IdentityResult Create(LoginModel model)
         {
             var userWithSameEmail = _userManager.Users
                 .FirstOrDefault(x => x.UserName == model.Email || x.Email == model.Email);
             if (userWithSameEmail != null)
-                return false;
+                return new IdentityResult("User already exists.");
 
             var entity = new User
             {
                 UserName = model.Email
             };
             var result = _userManager.Create(entity, model.Password);
-            return result.Succeeded;
+            return result;
         }
     }
 }

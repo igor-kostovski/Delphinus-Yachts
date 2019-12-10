@@ -1,0 +1,18 @@
+﻿@model Delphinus_Yachts.DTOs.LoginDTO
+@{
+    Layout = null;
+    ViewData["actionName"] = "SignIn";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign in</title>
+</head>
+<body>
+    @Html.Partial("_LogInSignInForm", Model)
+</body>
+</html>
+
