@@ -14,9 +14,14 @@ namespace Delphinus_Yachts
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Account",
+                "Account/{action}/{id}",
+                new {controller = "Account", action = "RedirectToLocal", id = UrlParameter.Optional});
+
+            routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{entity}/{action}/{id}",
+                defaults: new { controller = "Mvc", action = "Index", entity = "Default", id = UrlParameter.Optional }
             );
         }
     }

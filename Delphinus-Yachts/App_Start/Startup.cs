@@ -35,8 +35,8 @@ namespace Delphinus_Yachts.App_Start
                 Provider = new CookieAuthenticationProvider
                 {
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<AppUserManager, User>(
-                        validateInterval: TimeSpan.FromMinutes(30),
-                        regenerateIdentity: (manager, user) =>
+                        TimeSpan.FromMinutes(30),
+                        (manager, user) =>
                             manager.CreateIdentityAsync(user, DefaultAuthenticationTypes.ApplicationCookie))
                 }
             });
