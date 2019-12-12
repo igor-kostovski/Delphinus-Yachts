@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using System.Web.Routing;
 using AutoMapper;
 using Delphinus_Yachts.Domain.Models;
 using Delphinus_Yachts.Domain.Services;
@@ -43,7 +44,7 @@ namespace Delphinus_Yachts.Controllers
             switch (status)
             {
                 case SignInStatus.Success:
-                    return Redirect("/Home/Index");
+                    return RedirectToAction("Index","Mvc",new RouteValueDictionary{{"entity","Bookings"}});
                 default:
                     ModelState.AddModelError("CustomError", "Invalid credentials.");
                     return View(dto);
