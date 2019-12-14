@@ -210,15 +210,15 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\sb-admin.css" />
-    <Content Include="Content\css\sb-admin.min.css" />
+    <Content Include="Content\css\sb-admin-2.css" />
+    <Content Include="Content\css\sb-admin-2.min.css" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
     <Content Include="Content\js\demo\chart-pie-demo.js" />
     <Content Include="Content\js\demo\datatables-demo.js" />
-    <Content Include="Content\js\sb-admin.js" />
-    <Content Include="Content\js\sb-admin.min.js" />
+    <Content Include="Content\js\sb-admin-2.js" />
+    <Content Include="Content\js\sb-admin-2.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
@@ -251,6 +251,8 @@
     <Content Include="Content\vendor\fontawesome-free\js\all.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\brands.js" />
     <Content Include="Content\vendor\fontawesome-free\js\brands.min.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\conflict-detection.js" />
+    <Content Include="Content\vendor\fontawesome-free\js\conflict-detection.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\fontawesome.js" />
     <Content Include="Content\vendor\fontawesome-free\js\fontawesome.min.js" />
     <Content Include="Content\vendor\fontawesome-free\js\regular.js" />
@@ -336,6 +338,7 @@
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\confluence.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\connectdevelop.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\contao.svg" />
+    <Content Include="Content\vendor\fontawesome-free\svgs\brands\cotton-bureau.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\cpanel.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\creative-commons-by.svg" />
     <Content Include="Content\vendor\fontawesome-free\svgs\brands\creative-commons-nc-eu.svg" />
