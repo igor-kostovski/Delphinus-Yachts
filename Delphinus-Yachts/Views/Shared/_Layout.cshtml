@@ -14,7 +14,7 @@
 <body id="page-top">
     <div id="wrapper">
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="@Url.Action("Index","Mvc",new RouteValueDictionary{{"entity","Bookings"}})">
                 <div class="sidebar-brand-icon" style="background-color: white; border-radius: 100px;">
                     <img src="../../Content/Images/Logo.png" width="75" height="50" />
                 </div>
@@ -34,7 +34,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index","Mvc",new RouteValueDictionary{{"entity","Bookings"}})">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-anchor"></i>
                     <span>Bookings</span>
                 </a>
             </li>
@@ -42,7 +42,7 @@
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-fw fa-file-signature"></i>
                     <span>Contracts</span>
                 </a>
             </li>
@@ -58,7 +58,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-fw fa-folder"></i>
+                    <i class="fas fa-fw fa-route"></i>
                     <span>Routes</span>
                 </a>
             </li>
@@ -66,7 +66,7 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-calendar-alt"></i>
                     <span>Availability</span>
                 </a>
             </li>

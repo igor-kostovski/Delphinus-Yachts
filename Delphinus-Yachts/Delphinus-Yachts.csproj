@@ -1990,7 +1990,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\SignIn.cshtml" />
     <Content Include="Views\Shared\_LogInSignInForm.cshtml" />
-    <Content Include="Views\Shared\_Logout.cshtml" />
+    <Content Include="Views\Shared\_UserInfo.cshtml" />
     <Content Include="Views\Mvc\Bookings\Index.cshtml" />
     <Content Include="Views\Mvc\Bookings\Edit.cshtml" />
     <Content Include="Views\Mvc\Default\Index.cshtml" />
