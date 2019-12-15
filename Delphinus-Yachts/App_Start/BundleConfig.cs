@@ -9,19 +9,19 @@ namespace Delphinus_Yachts
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Dependencies/Scripts/jquery-{version}.js"));
+                        "~/Client/Dependencies/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Dependencies/Scripts/jquery.validate*"));
+                        "~/Client/Dependencies/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Dependencies/Scripts/modernizr-*"));
+                        "~/Client/Dependencies/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Dependencies/Scripts/bootstrap.js",
-                      "~/Dependencies/Scripts/respond.js"));
+                      "~/Client/Dependencies/Scripts/bootstrap.js",
+                      "~/Client/Dependencies/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css"));
