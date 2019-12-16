@@ -208,6 +208,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\Dependencies\Scripts\vue-tables-2.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\sb-admin-2.css" />
@@ -1816,8 +1817,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Client\Dependencies\Scripts\bootstrap.js" />
+    <Content Include="Client\Dependencies\Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1965,17 +1966,19 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <None Include="Client\Dependencies\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery-1.10.2.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery-1.10.2.min.js" />
+    <None Include="Client\Dependencies\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery.validate.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery.validate.min.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Client\Dependencies\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Client\Dependencies\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Client\Dependencies\Scripts\respond.js" />
+    <Content Include="Client\Dependencies\Scripts\respond.min.js" />
+    <Content Include="Client\Dependencies\Scripts\vue.js" />
+    <Content Include="Client\Dependencies\Scripts\vue.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1997,12 +2000,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Client\Src\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Client\Dependencies\Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Delphinus-Yachts.Domain\Delphinus-Yachts.Domain.csproj">

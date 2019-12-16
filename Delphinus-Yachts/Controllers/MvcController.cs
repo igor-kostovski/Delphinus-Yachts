@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace Delphinus_Yachts.Controllers
 {
+    [Authorize]
     public class MvcController : Controller
     {
         public ActionResult Index(string entity)
