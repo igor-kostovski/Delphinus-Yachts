@@ -13,7 +13,8 @@ namespace Delphinus_Yachts
                 "~/Client/Dependencies/Scripts/jquery.validate*",
                 "~/Client/Dependencies/Scripts/modernizr-*",
                 "~/Client/Dependencies/Scripts/bootstrap.js",
-                "~/Client/Dependencies/Scripts/respond.js"
+                "~/Client/Dependencies/Scripts/respond.js",
+                "~/Client/Dependencies/Scripts/vue-tables-2.min.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
