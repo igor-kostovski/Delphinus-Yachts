@@ -90,6 +90,7 @@
     <Compile Include="AppUserManager.cs" />
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
     <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Role.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />

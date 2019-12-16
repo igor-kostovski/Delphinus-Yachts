@@ -10,6 +10,9 @@ namespace Delphinus_Yachts.Domain.Data
         {
             Database.SetInitializer<DataContext>(null);
         }
+
+        public DbSet<Booking> Bookings { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
