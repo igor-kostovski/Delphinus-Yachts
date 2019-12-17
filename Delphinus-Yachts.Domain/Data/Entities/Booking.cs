@@ -11,6 +11,13 @@ namespace Delphinus_Yachts.Domain.Data.Entities
         public DateTime EndDate { get; set; }
         public string StartLocation { get; set; }
         public string EndLocation { get; set; }
+
         public BookingStatus Status { get; set; }
+
+        public string StatusAsString
+        {
+            get => EnumExtensions.ToString(Status);
+            private set => EnumExtensions.ToEnum<BookingStatus>(value);
+        }
     }
 }

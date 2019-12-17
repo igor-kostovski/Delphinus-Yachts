@@ -93,7 +93,9 @@
     <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Role.cs" />
     <Compile Include="Data\Entities\User.cs" />
+    <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />
+    <Compile Include="Data\Enums\EnumExtensions.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.designer.cs">
@@ -113,7 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Automapper\Profiles\" />
-    <Folder Include="Data\EntityConfigurations\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912032044245_InitialMigration.resx">
