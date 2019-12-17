@@ -3,6 +3,28 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div id="table" v-cloak>
+    <div class="d-sm-flex align-items-center mb-4">
+        <h1 class="h2 mb-0 text-grey-800">Bookings</h1>
+        <button class="btn btn-primary btn-icon-split btn-sm" style="margin-left: 5px;">
+            <span class="icon text-white-50">
+                <i class="fas fa-file"></i>
+            </span>
+            <span class="text">New</span>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <Grid :style="{height: '10px'}"
+                    :data-items="items"
+                    :columns="columns">
+                </Grid>
+            </div>
+        </div>
+    </div>
+</div>
 
-<h2>Index</h2>
-
+@section scripts {
+    @Scripts.Render("~/bundles/bookings/Index")
+}
