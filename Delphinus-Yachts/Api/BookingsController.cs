@@ -8,7 +8,6 @@ using Delphinus_Yachts.DTOs;
 namespace Delphinus_Yachts.Api
 {
     [Authorize]
-    [Route("api/[controller]")]
     public class BookingsController : ApiController
     {
         private readonly BookingService _bookingService;
