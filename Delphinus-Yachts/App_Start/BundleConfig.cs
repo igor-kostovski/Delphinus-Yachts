@@ -14,7 +14,8 @@ namespace Delphinus_Yachts
                 "~/Client/Dependencies/Scripts/bootstrap.js",
                 "~/Client/Dependencies/Scripts/respond.js",
                 "~/Client/Dependencies/Scripts/vue.min.js",
-                "~/Client/Dependencies/Scripts/axios.min.js"
+                "~/Client/Dependencies/Scripts/axios.min.js",
+                "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/style-scripts").Include(
