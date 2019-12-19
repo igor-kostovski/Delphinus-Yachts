@@ -26,28 +26,35 @@
                 name: "statusAsString"
             }],
             config: {
+                card_mode: false,
                 show_refresh_button: false,
                 per_page_options: [5, 10],
-                pagination_info: false
+                pagination_info: false,
+                show_reset_button: false,
+                server_mode: true,
+                global_search: {
+                    visibility: false
+                }
             },
             queryParams: {
-                sort: [],
-                filters: [],
-                global_search: "",
                 per_page: 10,
                 page: 1,
             },
+            searchText: "",
+            timer: {}
         },
         methods: {
             onChangeQuery(queryParams) {
-                this.queryParams = queryParams;
-                this.getTableData();
+                if (!this.areEqual(queryParams)) {
+                    this.queryParams = queryParams;
+                    this.getTableData();
+                }
             },
             getTableData() {
                 this.isLoading = true;
                 axios.get(baseUrl + "api/bookings", {
                     params: {
-                        "query": this.queryParams.global_search,
+                        "query": this.searchText,
                         "page": this.queryParams.page,
                         "limit": this.queryParams.per_page
                     }
@@ -56,6 +63,16 @@
                     this.count = res.data.count;
                     this.isLoading = false;
                 });
+            },
+            areEqual(queryParams) {
+                var page = queryParams.page == this.queryParams.page;
+                var per_page = queryParams.per_page == this.queryParams.per_page;
+
+                return page && per_page;
+            },
+            changeSearchText() {
+                clearTimeout(this.timer);
+                this.timer = setTimeout(() => this.getTableData(), 1000);
             }
         },
         created: function () {

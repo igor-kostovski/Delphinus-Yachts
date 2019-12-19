@@ -25,6 +25,17 @@
                 </div>
             </div>
             <div v-else class="card shadow mb-4">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="form-control bg-light border-0 small" 
+                        placeholder="Search for..." 
+                        aria-label="Search" 
+                        aria-describedby="basic-addon2"
+                        v-on:input="changeSearchText()"
+                        v-model="searchText"
+                    >
+                </div>
                  <vue-bootstrap4-table 
                     :rows="rows" 
                     :columns="columns" 
