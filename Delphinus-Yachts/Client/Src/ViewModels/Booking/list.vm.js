@@ -5,43 +5,9 @@
             isLoading: false,
             rows: [],
             count: 0,
-            columns: [{
-                label: "Booking number",
-                name: "number"
-            },
-            {
-                label: "Start date",
-                name: "startDate"
-            },
-            {
-                label: "Start location",
-                name: "startLocation"
-            },
-            {
-                label: "End location",
-                name: "endLocation"
-            },
-            {
-                label: "Status",
-                name: "statusAsString"
-            }],
-            config: {
-                card_mode: false,
-                show_refresh_button: false,
-                per_page_options: [5, 10],
-                pagination_info: false,
-                show_reset_button: false,
-                server_mode: true,
-                global_search: {
-                    visibility: false
-                }
-            },
-            queryParams: {
-                per_page: 10,
-                page: 1,
-            },
-            searchText: "",
-            timer: {}
+            columns: constants.bookingListColumns,
+            config: constants.tableConfig,
+            queryParams: constants.tableQueryParams
         },
         methods: {
             onChangeQuery(queryParams) {
@@ -50,11 +16,11 @@
                     this.getTableData();
                 }
             },
-            getTableData() {
+            getTableData(searchText = null) {
                 this.isLoading = true;
                 axios.get(baseUrl + "api/bookings", {
                     params: {
-                        "query": this.searchText,
+                        "query": searchText,
                         "page": this.queryParams.page,
                         "limit": this.queryParams.per_page
                     }
@@ -69,10 +35,6 @@
                 var per_page = queryParams.per_page == this.queryParams.per_page;
 
                 return page && per_page;
-            },
-            changeSearchText() {
-                clearTimeout(this.timer);
-                this.timer = setTimeout(() => this.getTableData(), 1000);
             }
         },
         created: function () {

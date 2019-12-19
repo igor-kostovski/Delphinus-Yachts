@@ -25,11 +25,16 @@ namespace Delphinus_Yachts
                 "~/Content/js/sb-admin-2.min.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/src").Include(
+                "~/Client/Src/Constants.js"
+            ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/bookings/Index").Include(
-                "~/Client/Src/ViewModels/Booking/list.vm.js"
+                "~/Client/Src/ViewModels/Booking/list.vm.js",
+                "~/Client/Src/Components/SearchBox.vm.js"
             ));
         }
     }

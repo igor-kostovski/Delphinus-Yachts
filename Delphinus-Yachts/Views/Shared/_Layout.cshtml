@@ -93,13 +93,14 @@
             </div>
         </div>
     </div>
-    
+
     <script>
         baseUrl = '@Url.Content("~")';
     </script>
 
     @Scripts.Render("~/bundles/style-scripts")
     @Scripts.Render("~/bundles/dependencies")
+    @Scripts.Render("~/bundles/src")
     @RenderSection("scripts", false)
 </body>
 </html>
