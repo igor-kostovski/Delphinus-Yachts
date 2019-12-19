@@ -16,8 +16,8 @@ namespace Delphinus_Yachts.Domain.Data.Entities
 
         public string StatusAsString
         {
-            get => EnumExtensions.ToString(Status);
-            private set => EnumExtensions.ToEnum<BookingStatus>(value);
+            get => Status.ToString();
+            private set => Status = value.ToEnum<BookingStatus>().Value;
         }
     }
 }
