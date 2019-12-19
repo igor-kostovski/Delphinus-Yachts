@@ -21,7 +21,12 @@
                 </div>
             </div>
             <div v-else class="card shadow mb-4">
-                 <vue-bootstrap4-table :rows="rows" :columns="columns" :config="config"></vue-bootstrap4-table>
+                 <vue-bootstrap4-table 
+                    :rows="rows" 
+                    :columns="columns" 
+                    :config="config"
+                    v-on:on-change-query="onChangeQuery"
+                    :totalRows="count" />
             </div>
         </div>
     </div>
