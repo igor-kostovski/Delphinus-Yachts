@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
+using System.Linq.Expressions;
 using AutoMapper;
 using Delphinus_Yachts.Domain.Data;
 using Delphinus_Yachts.Domain.Data.Entities;
 using Delphinus_Yachts.Domain.Models;
+using Delphinus_Yachts.Domain.Models.Table;
 
 namespace Delphinus_Yachts.Domain.Services
 {
@@ -18,11 +20,25 @@ namespace Delphinus_Yachts.Domain.Services
             _mapper = mapper;
         }
 
-        public List<BookingModel> GetAll()
+        public DataAndCount<Booking> GetAll(TableFilter filter)
         {
-            var entities = _context.Bookings.ToList();
+            Expression<Func<Booking, bool>> searchBookingNumbers = x => true;
+            if (!string.IsNullOrWhiteSpace(filter.Query))
+            {
+                searchBookingNumbers = x => x.Number.Contains(filter.Query);
+            }
 
-            return _mapper.Map<List<BookingModel>>(entities);
+            var query = _context.Bookings
+                .Where(searchBookingNumbers)
+                .OrderBy(x => x.Id)
+                .Skip((filter.Page - 1) * filter.Limit)
+                .Take(filter.Limit);
+
+            return new DataAndCount<Booking>
+            {
+                Data = query.ToList(),
+                Count = query.Count()
+            };
         }
 
         public BookingModel Get(int id)

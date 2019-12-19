@@ -20,11 +20,11 @@ namespace Delphinus_Yachts.Api
         }
 
         [HttpGet]
-        public IHttpActionResult Get()
+        public IHttpActionResult Get([FromUri]TableFilter filter)
         {
-            var bookings = _bookingService.GetAll();
+            var dataAndCount = _bookingService.GetAll(filter);
 
-            return Ok(_mapper.Map<List<BookingDTO>>(bookings));
+            return Ok(dataAndCount);
         }
 
         [HttpGet]
