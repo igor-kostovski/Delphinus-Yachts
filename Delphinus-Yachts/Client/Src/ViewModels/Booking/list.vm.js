@@ -23,7 +23,7 @@
             },
             {
                 label: "Status",
-                name: "status"
+                name: "statusAsString"
             }],
             config: {
                 show_refresh_button: false,
