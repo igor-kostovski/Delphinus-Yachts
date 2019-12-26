@@ -35,7 +35,7 @@
 
     constants.tableQueryParams = {
         per_page: 10,
-        page: 1,
+        page: 1
     };
 
 })(window, window.constants = window.constants || {});

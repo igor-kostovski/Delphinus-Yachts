@@ -37,7 +37,7 @@ namespace Delphinus_Yachts.Domain.Services
             return new DataAndCount<Booking>
             {
                 Data = query.ToList(),
-                Count = query.Count()
+                Count = _context.Bookings.Count()
             };
         }
 

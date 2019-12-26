@@ -21,7 +21,11 @@
                 var vm = this;
                 clearTimeout(this.timer);
                 this.timer = setTimeout(() => vm.$emit('get-table-data', vm.searchText), 1000);
+                localStorage.searchText = this.searchText;
             }
+        },
+        created: function () {
+            this.searchText = localStorage.searchText;
         }
     };
     Vue.component('search-box', searchBox);
