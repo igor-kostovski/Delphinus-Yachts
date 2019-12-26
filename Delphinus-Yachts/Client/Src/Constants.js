@@ -22,6 +22,7 @@
     }];
 
     constants.tableConfig = {
+        pagination: false,
         card_mode: false,
         show_refresh_button: false,
         per_page_options: [5, 10],
@@ -33,8 +34,8 @@
         }
     };
 
-    constants.tableQueryParams = {
-        per_page: 10,
+    constants.tablePaginationConfig = {
+        perPage: 10,
         page: 1
     };
 

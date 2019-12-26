@@ -34,8 +34,6 @@
                     :rows="rows" 
                     :columns="columns" 
                     :config="config"
-                    v-on:on-change-query="onChangeQuery"
-                    :totalRows="count"
                 >
                     <template slot="number" slot-scope="props">
                         <a v-bind:href="'@Url.Content("~")Bookings/Edit/' + props.row.id">{{props.cell_value}}</a>
