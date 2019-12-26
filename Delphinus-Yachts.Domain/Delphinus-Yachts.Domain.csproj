@@ -89,18 +89,31 @@
   <ItemGroup>
     <Compile Include="AppUserManager.cs" />
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
+    <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Role.cs" />
     <Compile Include="Data\Entities\User.cs" />
+    <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
+    <Compile Include="Data\Enums\BookingStatus.cs" />
+    <Compile Include="Data\Enums\EnumExtensions.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.designer.cs">
       <DependentUpon>201912032044245_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912171519285_AddedBooking.cs" />
+    <Compile Include="Migrations\201912171519285_AddedBooking.designer.cs">
+      <DependentUpon>201912171519285_AddedBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BookingModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\Table\DataAndCount.cs" />
+    <Compile Include="Models\Table\TableFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\BookingService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,13 +122,13 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Automapper\Profiles\" />
-    <Folder Include="Data\EntityConfigurations\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912032044245_InitialMigration.resx">
       <DependentUpon>201912032044245_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912171519285_AddedBooking.resx">
+      <DependentUpon>201912171519285_AddedBooking.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

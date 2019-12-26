@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using Delphinus_Yachts.Domain.Data.Entities;
+using Delphinus_Yachts.Domain.Data.EntityConfigurations;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Delphinus_Yachts.Domain.Data
@@ -10,8 +11,12 @@ namespace Delphinus_Yachts.Domain.Data
         {
             Database.SetInitializer<DataContext>(null);
         }
+
+        public DbSet<Booking> Bookings { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Configurations.Add(new BookingConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

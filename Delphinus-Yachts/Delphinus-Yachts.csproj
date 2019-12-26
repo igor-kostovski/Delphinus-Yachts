@@ -191,6 +191,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\BookingsController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -198,9 +199,11 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Automapper\AutomapperWebConfig.cs" />
+    <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
+    <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -208,7 +211,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Client\Dependencies\Scripts\vue-tables-2.min.js" />
+    <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
+    <Content Include="Client\Src\Components\SearchBox.vm.js" />
+    <Content Include="Client\Src\Constants.js" />
+    <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\sb-admin-2.css" />
@@ -1979,6 +1985,8 @@
     <Content Include="Client\Dependencies\Scripts\respond.min.js" />
     <Content Include="Client\Dependencies\Scripts\vue.js" />
     <Content Include="Client\Dependencies\Scripts\vue.min.js" />
+    <Content Include="Client\Dependencies\Scripts\axios.js" />
+    <Content Include="Client\Dependencies\Scripts\axios.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2000,7 +2008,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Client\Src\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
