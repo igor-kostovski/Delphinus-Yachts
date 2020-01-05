@@ -15,7 +15,9 @@ namespace Delphinus_Yachts
                 "~/Client/Dependencies/Scripts/respond.js",
                 "~/Client/Dependencies/Scripts/vue.min.js",
                 "~/Client/Dependencies/Scripts/axios.min.js",
-                "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js"
+                "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js",
+                "~/Client/Dependencies/Scripts/moment.min.js",
+                "~/Client/Dependencies/Scripts/bootstrap-datetimepicker.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/style-scripts").Include(
@@ -32,7 +34,8 @@ namespace Delphinus_Yachts
             ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/bootstrap.css"));
+                "~/Content/bootstrap.css",
+                "~/Content/bootstrap-datetimepicker.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/bookings/Index").Include(
                 "~/Client/Src/ViewModels/Booking/list.vm.js",
