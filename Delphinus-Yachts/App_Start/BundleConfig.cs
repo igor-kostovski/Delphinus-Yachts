@@ -26,7 +26,9 @@ namespace Delphinus_Yachts
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/src").Include(
-                "~/Client/Src/Constants.js"
+                "~/Client/Src/Constants.js",
+                "~/Client/Src/Enums.js",
+                "~/Client/Src/Utils.js"
             ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
@@ -35,6 +37,10 @@ namespace Delphinus_Yachts
             bundles.Add(new ScriptBundle("~/bundles/bookings/Index").Include(
                 "~/Client/Src/ViewModels/Booking/list.vm.js",
                 "~/Client/Src/Components/SearchBox.vm.js"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/bookings/Edit").Include(
+                "~/Client/Src/ViewModels/Booking/edit.vm.js"
             ));
         }
     }

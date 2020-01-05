@@ -101,6 +101,9 @@
 
     @Scripts.Render("~/bundles/style-scripts")
     @Scripts.Render("~/bundles/dependencies")
+    <script>
+        Vue.config.devtools = true; //enabling vue devtools
+    </script>
     @Scripts.Render("~/bundles/src")
     @RenderSection("scripts", false)
 </body>

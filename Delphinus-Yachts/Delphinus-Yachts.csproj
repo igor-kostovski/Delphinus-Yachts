@@ -214,6 +214,8 @@
     <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
     <Content Include="Client\Src\Components\SearchBox.vm.js" />
     <Content Include="Client\Src\Constants.js" />
+    <Content Include="Client\Src\Enums.js" />
+    <Content Include="Client\Src\Utils.js" />
     <Content Include="Client\Src\ViewModels\Booking\edit.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
     <Content Include="Content\bootstrap.css" />
