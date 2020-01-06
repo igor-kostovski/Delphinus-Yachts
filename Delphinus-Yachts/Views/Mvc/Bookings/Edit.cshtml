@@ -21,22 +21,6 @@
                 <div class="card-body">
                     <div class="row indent-left-sm">
                         <div class="form-group col-lg-4">
-                            <label>Start date</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <input class="text-input" type="text" v-model="booking.startDate" />
-                        </div>
-                    </div>
-                    <div class="row indent-left-sm">
-                        <div class="form-group col-lg-4">
-                            <label>End date</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <input class="text-input" type="text" v-model="booking.endDate" />
-                        </div>
-                    </div>
-                    <div class="row indent-left-sm">
-                        <div class="form-group col-lg-4">
                             <label>Start location</label>
                         </div>
                         <div class="form-group col-lg-3">
@@ -59,6 +43,35 @@
                             <input class="text-input" type="number" v-model="booking.numberOfPeople" />
                         </div>
                     </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Booking status</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <select class="select" v-model="booking.status">
+                                <option :value="undefined" disabled>Select status</option>
+                                <option 
+                                    v-for="status in Object.keys(enums.bookingStatus)" 
+                                    :value="enums.bookingStatus[status]"
+                                >
+                                    {{ enums.bookingStatus[status] }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Booking dates</label>
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <date-picker
+                                :start-date="booking.startDate"
+                                :end-date="booking.endDate"
+                                v-on:change-start-date="changeStartDate"
+                                v-on:change-end-date="changeEndDate"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,22 +87,6 @@
                         </div>
                         <div class="form-group col-lg-3">
                             <input class="text-input" type="number" v-model="booking.price"/>
-                        </div>
-                    </div>
-                    <div class="row indent-left">
-                        <div class="form-group col-lg-3">
-                            <label>Booking status</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <select class="select" v-model="booking.status">
-                                <option :value="undefined" disabled>Select status</option>
-                                <option 
-                                    v-for="status in Object.keys(enums.bookingStatus)" 
-                                    :value="enums.bookingStatus[status]"
-                                >
-                                    {{ enums.bookingStatus[status] }}
-                                </option>
-                            </select>
                         </div>
                     </div>
                 </div>
