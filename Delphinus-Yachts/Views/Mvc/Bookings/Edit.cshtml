@@ -4,5 +4,129 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<div id="edit">
+    <div class="d-sm-flex align-items-center mb-4">
+        <h1 class="h2 mb-0 text-gray-800">Booking</h1>
+        <div style="margin-left: 5px">
+            <button class="btn btn-info btn-sm" v-on:click="window.history.back();">Back to list</button>
+            <button class="btn btn-primary btn-sm" v-on:click="save">Save</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card mb-4">
+                <div class="card-header theme-background">
+                    Basic info
+                </div>
+                <div class="card-body">
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Start location</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="text" v-model="booking.startLocation" />
+                        </div>
+                    </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>End location</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="text" v-model="booking.endLocation" />
+                        </div>
+                    </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Number of people</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="number" v-model="booking.numberOfPeople" />
+                        </div>
+                    </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Booking status</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <select class="select" v-model="booking.status">
+                                <option :value="undefined" disabled>Select status</option>
+                                <option 
+                                    v-for="status in Object.keys(enums.bookingStatus)" 
+                                    :value="enums.bookingStatus[status]"
+                                >
+                                    {{ enums.bookingStatus[status] }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Booking dates</label>
+                        </div>
+                        <div class="form-group col-lg-8">
+                            <date-picker
+                                :start-date="booking.startDate"
+                                :end-date="booking.endDate"
+                                v-on:change-start-date="changeStartDate"
+                                v-on:change-end-date="changeEndDate"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card mb-4">
+                <div class="card-header theme-background">
+                    Pricing info
+                </div>
+                <div class="card-body">
+                    <div class="row indent-left">
+                        <div class="form-group col-lg-3">
+                            <label>Price</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="number" v-model="booking.price"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card-header theme-background">
+                    Route info
+                </div>
+                <div class="card-body">
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Route name</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="number" v-model="booking.routeName" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card mb-4">
+                <div class="card-header theme-background">
+                    Contract info
+                </div>
+                <div class="card-body">
+                    <div class="row indent-left-sm">
+                        <div class="form-group col-lg-4">
+                            <label>Contract type</label>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <input class="text-input" type="number" v-model="booking.contractType" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+@section scripts {
+    @Scripts.Render("~/bundles/bookings/Edit")
+}

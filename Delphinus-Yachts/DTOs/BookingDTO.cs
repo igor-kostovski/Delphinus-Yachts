@@ -12,6 +12,6 @@ namespace Delphinus_Yachts.DTOs
         public string StartLocation { get; set; }
         public string EndLocation { get; set; }
 
-        public BookingStatus Status { get; set; }
+        public string Status { get; set; }
     }
 }

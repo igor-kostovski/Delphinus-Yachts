@@ -39,4 +39,16 @@
         page: 1
     };
 
+    constants.datePickerOptions = {
+        colors: {
+            selected: '#41579F',
+            inRange: '#A6A6A8',
+            selectedText: '#fff',
+            text: '#565a5c',
+            inRangeBorder: '#719BE6',
+            disabled: '#fff',
+            hoveredInRange: '#212529'
+        }
+    };
+
 })(window, window.constants = window.constants || {});

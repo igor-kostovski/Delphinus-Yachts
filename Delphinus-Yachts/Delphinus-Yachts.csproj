@@ -211,14 +211,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\Dependencies\Scripts\datepicker.min.js" />
     <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
+    <Content Include="Client\Src\Components\Datepicker.vm.js" />
     <Content Include="Client\Src\Components\SearchBox.vm.js" />
     <Content Include="Client\Src\Constants.js" />
+    <Content Include="Client\Src\Enums.js" />
+    <Content Include="Client\Src\Utils.js" />
+    <Content Include="Client\Src\ViewModels\Booking\edit.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-iso.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
+    <Content Include="Content\datepicker.min.css" />
     <Content Include="Content\Images\Logo.png" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
@@ -1987,6 +1992,7 @@
     <Content Include="Client\Dependencies\Scripts\vue.min.js" />
     <Content Include="Client\Dependencies\Scripts\axios.js" />
     <Content Include="Client\Dependencies\Scripts\axios.min.js" />
+    <Content Include="Client\Dependencies\Scripts\moment.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

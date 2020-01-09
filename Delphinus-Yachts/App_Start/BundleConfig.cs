@@ -15,7 +15,9 @@ namespace Delphinus_Yachts
                 "~/Client/Dependencies/Scripts/respond.js",
                 "~/Client/Dependencies/Scripts/vue.min.js",
                 "~/Client/Dependencies/Scripts/axios.min.js",
-                "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js"
+                "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js",
+                "~/Client/Dependencies/Scripts/moment.min.js",
+                "~/Client/Dependencies/Scripts/datepicker.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/style-scripts").Include(
@@ -26,15 +28,23 @@ namespace Delphinus_Yachts
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/src").Include(
-                "~/Client/Src/Constants.js"
+                "~/Client/Src/Constants.js",
+                "~/Client/Src/Enums.js",
+                "~/Client/Src/Utils.js"
             ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/bootstrap.css"));
+                "~/Content/bootstrap-iso.css",
+                "~/Content/datepicker.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/bookings/Index").Include(
                 "~/Client/Src/ViewModels/Booking/list.vm.js",
                 "~/Client/Src/Components/SearchBox.vm.js"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/bookings/Edit").Include(
+                "~/Client/Src/ViewModels/Booking/edit.vm.js",
+                "~/Client/Src/Components/Datepicker.vm.js"
             ));
         }
     }
