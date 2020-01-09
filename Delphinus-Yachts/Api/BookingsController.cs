@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Web.Http;
+﻿using System.Web.Http;
 using AutoMapper;
 using Delphinus_Yachts.Domain.Models;
 using Delphinus_Yachts.Domain.Services;
