@@ -28,6 +28,14 @@
             },
             changeEndDate(date) {
                 this.booking.endDate = date;
+            },
+            initDatePicker() {
+                var currentDate = new Date();
+                var vm = this;
+                setTimeout(function () {
+                    vm.booking.startDate = currentDate.toISOString().slice(0, 10);
+                    vm.booking.endDate = (new Date(currentDate.setDate(currentDate.getDate() + 7))).toISOString().slice(0, 10);
+                }, 50);
             }
         },
         created: function () {
@@ -35,11 +43,8 @@
 
             if (this.booking.id != 0)
                 this.init();
-            else {
-                var currentDate = new Date();
-                this.booking.startDate = currentDate.toISOString().slice(0, 10);
-                this.booking.endDate = (new Date(currentDate.setDate(currentDate.getDate() + 7))).toISOString().slice(0, 10);
-            }
+            else
+                this.initDatePicker();
         }
     });
 })();
