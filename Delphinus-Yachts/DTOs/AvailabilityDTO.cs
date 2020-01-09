@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
 namespace Delphinus_Yachts.DTOs
 {
     public class AvailabilityDTO
     {
-        public List<object> Bookings { get; set; }
+        public int BookingId { get; set; }
+        public DateTime BookingStart { get; set; }
+        public DateTime BookingEnd { get; set; }
+        public string BookingStatus { get; set; }
     }
 }

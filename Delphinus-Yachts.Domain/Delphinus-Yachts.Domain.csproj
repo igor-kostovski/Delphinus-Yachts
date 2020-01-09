@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="AppUserManager.cs" />
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
+    <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
