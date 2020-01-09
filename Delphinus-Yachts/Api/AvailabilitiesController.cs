@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
 using AutoMapper;
+using Delphinus_Yachts.Domain.Models.Availability;
 using Delphinus_Yachts.Domain.Services;
 using Delphinus_Yachts.DTOs;
 
@@ -18,9 +19,9 @@ namespace Delphinus_Yachts.Api
             _availabilityService = availabilityService;
         }
 
-        public IHttpActionResult Get()
+        public IHttpActionResult Get([FromUri]AvailabilityFilter filter)
         {
-            var models = _availabilityService.Get();
+            var models = _availabilityService.Get(filter);
 
             return Ok(_mapper.Map<List<AvailabilityDTO>>(models));
         }
