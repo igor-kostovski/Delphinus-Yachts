@@ -9,10 +9,12 @@
                 :trigger-element-id="'trigger'"
                 :mode="'single'"
                 :inline="true"
-                :months-to-show="3"
+                :months-to-show="2"
                 v-on:previous-month="onMonthChange"
                 v-on:next-month="onMonthChange"
-                :data="data"
+                :bookings="data"
+                :calendar-mode="true"
+                v-on:show-popup="showPopup"
             ></airbnb-style-datepicker>
         </div>
         `,
@@ -20,6 +22,9 @@
         methods: {
             onMonthChange(startingDates) {
                 this.$emit('on-months-change', startingDates);
+            },
+            showPopup(bookings) {
+                this.$emit("on-popup-change", bookings);
             }
         }
     };
