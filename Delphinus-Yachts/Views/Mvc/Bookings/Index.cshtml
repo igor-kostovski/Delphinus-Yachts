@@ -38,6 +38,9 @@
                     <template slot="number" slot-scope="props">
                         <a v-bind:href="'@Url.Content("~")Bookings/Edit/' + props.row.id">{{props.cell_value}}</a>
                     </template>
+                    <template slot="startDate" slot-scope="props">
+                        {{utils.formatDate(props.cell_value)}}
+                    </template>
                 </vue-bootstrap4-table>
             </div>
         </div>

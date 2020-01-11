@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="AppUserManager.cs" />
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
+    <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
@@ -107,12 +108,15 @@
       <DependentUpon>201912171519285_AddedBooking.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Availability\AvailabilityFilter.cs" />
+    <Compile Include="Models\Availability\AvailabilityModel.cs" />
     <Compile Include="Models\BookingModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Table\DataAndCount.cs" />
     <Compile Include="Models\Table\TableFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
+    <Compile Include="Services\AvailabilityService.cs" />
     <Compile Include="Services\BookingService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>

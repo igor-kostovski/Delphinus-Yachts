@@ -191,6 +191,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AvailabilitiesController.cs" />
     <Compile Include="Api\BookingsController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -199,10 +200,12 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Automapper\AutomapperWebConfig.cs" />
+    <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
+    <Compile Include="DTOs\AvailabilityDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,11 +216,13 @@
   <ItemGroup>
     <Content Include="Client\Dependencies\Scripts\datepicker.min.js" />
     <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
+    <Content Include="Client\Src\Components\Calendar.vm.js" />
     <Content Include="Client\Src\Components\Datepicker.vm.js" />
     <Content Include="Client\Src\Components\SearchBox.vm.js" />
     <Content Include="Client\Src\Constants.js" />
     <Content Include="Client\Src\Enums.js" />
     <Content Include="Client\Src\Utils.js" />
+    <Content Include="Client\Src\ViewModels\Availability\availability.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\edit.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
     <Content Include="Content\bootstrap-iso.css" />
@@ -2011,6 +2016,7 @@
     <Content Include="Views\Mvc\Bookings\Index.cshtml" />
     <Content Include="Views\Mvc\Bookings\Edit.cshtml" />
     <Content Include="Views\Mvc\Default\Index.cshtml" />
+    <Content Include="Views\Mvc\Availability\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="view">
+    <div class="d-sm-flex align-items-center mb-4">
+        <h1 class="h2 mb-0 text-grey-800">Availability</h1>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <calendar-component 
+                v-on:on-months-change="onMonthsChange"
+                :data="bookings"
+                v-on:on-popup-change="onPopupChange"
+            />
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-header theme-background">
+                            Legend
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                    <div class="row" style="justify-content: center">
+                                        <span class="dot" style="background-color: rgba(0, 255, 31, 0.5); margin-right: 5px;"></span>
+                                        <label>Complete</label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                    <div class="row" style="justify-content: center">
+                                        <span class="dot" style="background-color: rgba(255,204,0,0.7); margin-right: 5px;"></span>
+                                        <label>Optional</label>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                    <div class="row" style="justify-content: center">
+                                        <span class="dot" style="border: 1px solid; margin-right: 5px;"></span>
+                                        <label>Free</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-header theme-background">
+                            Booking info
+                        </div>
+                        <div class="card-body">
+                            <div v-if="!!bookingsInfo.length" v-for="(booking, index) in bookingsInfo">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="row indent-left-sm">
+                                            <div class="form-group col-lg-5">
+                                                <label>Start date</label>
+                                            </div>
+                                            <div class="form-group col-lg-5">
+                                                <input class="text-input" type="text" disabled :value="utils.formatDate(booking.bookingStart)" />
+                                            </div>
+                                        </div>
+                                        <div class="row indent-left-sm">
+                                            <div class="form-group col-lg-5">
+                                                <label>End date</label>
+                                            </div>
+                                            <div class="form-group col-lg-5">
+                                                <input class="text-input" type="text" disabled :value="utils.formatDate(booking.bookingEnd)" />
+                                            </div>
+                                        </div>
+                                        <div class="row indent-left-sm">
+                                            <div class="form-group col-lg-5">
+                                                <label>Status</label>
+                                            </div>
+                                            <div class="form-group col-lg-5">
+                                                <input class="text-input" type="text" disabled :value="booking.bookingStatus" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="row indent-left-sm">&nbsp;</div>
+                                        <div class="row indent-left-sm">&nbsp;</div>
+                                        <div class="row indent-left-sm" style="justify-content: center">
+                                            <button 
+                                                class="btn btn-primary btn-sm" 
+                                                v-on:click="window.location.href = baseUrl + 'Bookings/Edit/' + booking.bookingId;"
+                                            >
+                                                Show more info
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr v-if="bookingsInfo.length != (index + 1)">
+                            </div>
+                            <div v-if="!bookingsInfo.length">
+                                You haven't selected any date yet.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/availability/Index")
+}
+
