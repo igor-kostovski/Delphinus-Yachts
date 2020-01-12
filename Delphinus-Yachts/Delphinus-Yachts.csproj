@@ -2020,6 +2020,8 @@
     <Content Include="Views\Mvc\Bookings\Edit.cshtml" />
     <Content Include="Views\Mvc\Default\Index.cshtml" />
     <Content Include="Views\Mvc\Availability\Index.cshtml" />
+    <Content Include="Views\Mvc\Contracts\Index.cshtml" />
+    <Content Include="Views\Mvc\Contracts\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
