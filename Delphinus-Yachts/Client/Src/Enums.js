@@ -4,4 +4,9 @@
         optional: 'Optional',
         cancelled: 'Cancelled'
     };
+
+    enums.contractType = {
+        myba: 'Myba',
+        nonMyba: 'NonMyba'
+    };
 })(window, window.enums = window.enums || {});
