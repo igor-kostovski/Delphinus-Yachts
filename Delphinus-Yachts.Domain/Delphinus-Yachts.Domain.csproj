@@ -91,6 +91,7 @@
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
     <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
+    <Compile Include="Automapper\Profiles\ContractProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Contract.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
     <Compile Include="Models\Availability\AvailabilityModel.cs" />
     <Compile Include="Models\BookingModel.cs" />
+    <Compile Include="Models\ContractModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Table\DataAndCount.cs" />
     <Compile Include="Models\Table\TableFilter.cs" />
