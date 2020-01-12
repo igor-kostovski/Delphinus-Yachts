@@ -3,6 +3,7 @@
     public class ContractDTO
     {
         public int Id { get; set; }
+        public double Price { get; set; }
         public double Discount { get; set; }
         public double APA { get; set; }
         public double Tax { get; set; }

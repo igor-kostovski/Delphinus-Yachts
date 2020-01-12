@@ -26,6 +26,10 @@
         name: "payingPassenger"
     },
     {
+        label: "Price",
+        name: "price"
+    },
+    {
         label: "Type",
         name: "typeAsString"
     },
