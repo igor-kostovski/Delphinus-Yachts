@@ -127,6 +127,7 @@
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\AvailabilityService.cs" />
     <Compile Include="Services\BookingService.cs" />
+    <Compile Include="Services\ContractService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
