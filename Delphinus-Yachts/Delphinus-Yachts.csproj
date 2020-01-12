@@ -228,6 +228,8 @@
     <Content Include="Client\Src\ViewModels\Availability\availability.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\edit.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
+    <Content Include="Client\Src\ViewModels\Contracts\edit.vm.js" />
+    <Content Include="Client\Src\ViewModels\Contracts\list.vm.js" />
     <Content Include="Content\bootstrap-iso.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />

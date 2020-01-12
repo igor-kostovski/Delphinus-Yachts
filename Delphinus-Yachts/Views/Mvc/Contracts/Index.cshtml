@@ -4,5 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div id="table">
+    <h2>Index</h2>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/contracts/Index")
+}
 
