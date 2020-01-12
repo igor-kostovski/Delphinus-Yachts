@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="table">
+    <div class="d-sm-flex align-items-center mb-4">
+        <h1 class="h2 mb-0 text-grey-800">Contracts</h1>
+        <button 
+            class="btn btn-primary btn-icon-split btn-sm" 
+            style="margin-left: 5px;" 
+            v-on:click="window.location.href = baseUrl + 'Contracts/Edit';"
+        >
+            <span class="icon text-white-50">
+                <i class="fas fa-file"></i>
+            </span>
+            <span class="text">New</span>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div v-if="isLoading" class="d-flex justify-content-center">
+                <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div v-else class="card shadow mb-4">
+                <div class="input-group">
+                    <search-box 
+                        v-on:get-table-data="getTableData"
+                    />
+                </div>
+                <vue-bootstrap4-table 
+                    :rows="rows" 
+                    :columns="columns" 
+                    :config="config"
+                >
+                    <template slot="payingPassenger" slot-scope="props">
+                        <a v-bind:href="'@Url.Content("~")Contracts/Edit/' + props.row.id">{{props.cell_value}}</a>
+                    </template>
+                    <template slot="tax" slot-scope="props">
+                        {{props.cell_value}}%
+                    </template>
+                    <template slot="discount" slot-scope="props">
+                        {{props.cell_value}}%
+                    </template>
+                </vue-bootstrap4-table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/contracts/Index")
+}
+

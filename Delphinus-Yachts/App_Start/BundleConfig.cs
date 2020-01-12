@@ -51,6 +51,11 @@ namespace Delphinus_Yachts
                 "~/Client/Src/ViewModels/Availability/availability.vm.js",
                 "~/Client/Src/Components/Calendar.vm.js"
             ));
+
+            bundles.Add(new ScriptBundle("~/bundles/contracts/Index").Include(
+                "~/Client/Src/ViewModels/Contracts/list.vm.js",
+                "~/Client/Src/Components/SearchBox.vm.js"
+            ));
         }
     }
 }

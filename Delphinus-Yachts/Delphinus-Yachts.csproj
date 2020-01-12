@@ -193,6 +193,7 @@
   <ItemGroup>
     <Compile Include="Api\AvailabilitiesController.cs" />
     <Compile Include="Api\BookingsController.cs" />
+    <Compile Include="Api\ContractsController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -202,11 +203,13 @@
     <Compile Include="Automapper\AutomapperWebConfig.cs" />
     <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
+    <Compile Include="Automapper\Profiles\ContractProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
     <Compile Include="DTOs\AvailabilityDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
+    <Compile Include="DTOs\ContractDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -225,6 +228,8 @@
     <Content Include="Client\Src\ViewModels\Availability\availability.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\edit.vm.js" />
     <Content Include="Client\Src\ViewModels\Booking\list.vm.js" />
+    <Content Include="Client\Src\ViewModels\Contracts\edit.vm.js" />
+    <Content Include="Client\Src\ViewModels\Contracts\list.vm.js" />
     <Content Include="Content\bootstrap-iso.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -2017,6 +2022,8 @@
     <Content Include="Views\Mvc\Bookings\Edit.cshtml" />
     <Content Include="Views\Mvc\Default\Index.cshtml" />
     <Content Include="Views\Mvc\Availability\Index.cshtml" />
+    <Content Include="Views\Mvc\Contracts\Index.cshtml" />
+    <Content Include="Views\Mvc\Contracts\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

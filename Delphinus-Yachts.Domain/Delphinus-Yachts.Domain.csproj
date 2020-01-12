@@ -91,12 +91,16 @@
     <Compile Include="Automapper\AutomapperDomainConfig.cs" />
     <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
+    <Compile Include="Automapper\Profiles\ContractProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
+    <Compile Include="Data\Entities\Contract.cs" />
     <Compile Include="Data\Entities\Role.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
+    <Compile Include="Data\EntityConfigurations\ContractConfiguration.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />
+    <Compile Include="Data\Enums\ContractType.cs" />
     <Compile Include="Data\Enums\EnumExtensions.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.cs" />
@@ -107,10 +111,19 @@
     <Compile Include="Migrations\201912171519285_AddedBooking.designer.cs">
       <DependentUpon>201912171519285_AddedBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001121107562_AddedContractsTable.cs" />
+    <Compile Include="Migrations\202001121107562_AddedContractsTable.designer.cs">
+      <DependentUpon>202001121107562_AddedContractsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001121829082_AddedPriceColumnToContracts.cs" />
+    <Compile Include="Migrations\202001121829082_AddedPriceColumnToContracts.designer.cs">
+      <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
     <Compile Include="Models\Availability\AvailabilityModel.cs" />
     <Compile Include="Models\BookingModel.cs" />
+    <Compile Include="Models\ContractModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\Table\DataAndCount.cs" />
     <Compile Include="Models\Table\TableFilter.cs" />
@@ -118,6 +131,7 @@
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\AvailabilityService.cs" />
     <Compile Include="Services\BookingService.cs" />
+    <Compile Include="Services\ContractService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912171519285_AddedBooking.resx">
       <DependentUpon>201912171519285_AddedBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001121107562_AddedContractsTable.resx">
+      <DependentUpon>202001121107562_AddedContractsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001121829082_AddedPriceColumnToContracts.resx">
+      <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

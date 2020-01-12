@@ -21,6 +21,31 @@
         name: "statusAsString"
     }];
 
+    constants.contractListColumns = [{
+        label: "Paying passenger",
+        name: "payingPassenger"
+    },
+    {
+        label: "Price",
+        name: "price"
+    },
+    {
+        label: "Type",
+        name: "typeAsString"
+    },
+    {
+        label: "APA",
+        name: "apa"
+    },
+    {
+        label: "Tax",
+        name: "tax"
+    },
+    {
+        label: "Discount",
+        name: "discount"
+    }];
+
     constants.tableConfig = {
         pagination: false,
         card_mode: false,
