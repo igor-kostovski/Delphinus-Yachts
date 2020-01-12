@@ -1,4 +1,5 @@
-﻿using Delphinus_Yachts.Domain.Data.Enums;
+﻿using System;
+using Delphinus_Yachts.Domain.Data.Enums;
 
 namespace Delphinus_Yachts.Domain.Data.Entities
 {
@@ -10,5 +11,11 @@ namespace Delphinus_Yachts.Domain.Data.Entities
         public double Tax { get; set; }
         public string PayingPassenger { get; set; }
         public ContractType Type { get; set; }
+
+        public string TypeAsString
+        {
+            get => Type.ToString();
+            private set => Type = value.ToEnum<ContractType>().Value;
+        }
     }
 }
