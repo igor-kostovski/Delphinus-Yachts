@@ -18,7 +18,7 @@ namespace Delphinus_Yachts.Api
         }
 
         [HttpGet]
-        public IHttpActionResult Get(TableFilter filter)
+        public IHttpActionResult Get([FromUri]TableFilter filter)
         {
             var dataAndCount = _contractService.GetAll(filter);
 
