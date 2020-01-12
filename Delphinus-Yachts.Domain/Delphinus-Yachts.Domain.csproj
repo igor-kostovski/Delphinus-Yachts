@@ -93,10 +93,12 @@
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
+    <Compile Include="Data\Entities\Contract.cs" />
     <Compile Include="Data\Entities\Role.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />
+    <Compile Include="Data\Enums\ContractType.cs" />
     <Compile Include="Data\Enums\EnumExtensions.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Migrations\201912032044245_InitialMigration.cs" />
