@@ -7,16 +7,18 @@
                 endLocation: 'Split',
                 startDate: '',
                 endDate: ''
-            }
+            },
+            isNew: true
         },
         methods: {
             init: function () {
                 axios.get(baseUrl + "api/bookings/" + this.booking.id).then((res) => {
                     this.booking = res.data;
+                    this.isNew = false;
                 });
             },
             save: function () {
-                if (this.booking.id != 0)
+                if (!this.isNew)
                     axios.put(baseUrl + "api/bookings", this.booking);
                 else
                     axios.post(baseUrl + "api/bookings", this.booking).then((res) => {
