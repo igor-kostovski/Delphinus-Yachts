@@ -10,6 +10,10 @@ namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
         {
             Ignore(x => x.Type);
             Property(x => x.TypeAsString).HasColumnName("Type");
+
+            HasKey(x => x.Id);
+            Property(x => x.Id)
+                .HasColumnName("BookingId");
         }
     }
 }
