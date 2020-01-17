@@ -6,6 +6,7 @@ using Delphinus_Yachts.Domain.Data;
 using Delphinus_Yachts.Domain.Data.Entities;
 using Delphinus_Yachts.Domain.Models;
 using Delphinus_Yachts.Domain.Models.Table;
+using System.Data.Entity;
 
 namespace Delphinus_Yachts.Domain.Services
 {
@@ -43,7 +44,9 @@ namespace Delphinus_Yachts.Domain.Services
 
         public BookingModel Get(int id)
         {
-            var entity = _context.Bookings.SingleOrDefault(x => x.Id == id);
+            var entity = _context.Bookings
+                .Include(x => x.Contract)
+                .SingleOrDefault(x => x.Id == id);
 
             return _mapper.Map<BookingModel>(entity);
         }

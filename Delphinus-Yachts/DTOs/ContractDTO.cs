@@ -9,7 +9,5 @@
         public double Tax { get; set; }
         public string PayingPassenger { get; set; }
         public string Type { get; set; }
-
-        public BookingDTO Booking { get; set; }
     }
 }
