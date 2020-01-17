@@ -18,8 +18,5 @@ namespace Delphinus_Yachts.Domain.Data.Entities
             get => Type.ToString();
             private set => Type = value.ToEnum<ContractType>().Value;
         }
-
-        public int BookingId { get; set; }
-        public Booking Booking { get; set; }
     }
 }
