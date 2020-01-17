@@ -7,13 +7,13 @@ namespace Delphinus_Yachts.Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.3.0")]
-    public sealed partial class ConnectedBookingWithContract : IMigrationMetadata
+    public sealed partial class ConnectedContractWithBooking : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ConnectedBookingWithContract));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ConnectedContractWithBooking));
         
         string IMigrationMetadata.Id
         {
-            get { return "202001172149405_ConnectedBookingWithContract"; }
+            get { return "202001172201317_ConnectedContractWithBooking"; }
         }
         
         string IMigrationMetadata.Source
