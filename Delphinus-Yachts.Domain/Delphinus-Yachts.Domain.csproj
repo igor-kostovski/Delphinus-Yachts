@@ -119,6 +119,10 @@
     <Compile Include="Migrations\202001121829082_AddedPriceColumnToContracts.designer.cs">
       <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001172149405_ConnectedBookingWithContract.cs" />
+    <Compile Include="Migrations\202001172149405_ConnectedBookingWithContract.designer.cs">
+      <DependentUpon>202001172149405_ConnectedBookingWithContract.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
     <Compile Include="Models\Availability\AvailabilityModel.cs" />
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001121829082_AddedPriceColumnToContracts.resx">
       <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001172149405_ConnectedBookingWithContract.resx">
+      <DependentUpon>202001172149405_ConnectedBookingWithContract.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

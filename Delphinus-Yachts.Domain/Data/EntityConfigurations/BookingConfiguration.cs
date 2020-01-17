@@ -9,6 +9,8 @@ namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
         {
             Ignore(x => x.Status);
             Property(x => x.StatusAsString).HasColumnName("Status");
+
+            HasOptional(x => x.Contract);
         }
     }
 }
