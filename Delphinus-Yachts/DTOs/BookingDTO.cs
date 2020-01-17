@@ -12,8 +12,7 @@ namespace Delphinus_Yachts.DTOs
         public string StartLocation { get; set; }
         public string EndLocation { get; set; }
         public string Status { get; set; }
-
-        public int? ContractId { get; set; }
+        
         public ContractDTO Contract { get; set; }
     }
 }

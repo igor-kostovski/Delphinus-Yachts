@@ -19,8 +19,7 @@ namespace Delphinus_Yachts.Domain.Data.Entities
             get => Status.ToString();
             private set => Status = value.ToEnum<BookingStatus>().Value;
         }
-
-        public int? ContractId { get; set; }
+        
         public Contract Contract { get; set; }
     }
 }

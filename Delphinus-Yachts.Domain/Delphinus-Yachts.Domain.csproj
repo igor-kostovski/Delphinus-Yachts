@@ -123,6 +123,10 @@
     <Compile Include="Migrations\202001172227039_OneBookingToZeroContracts.designer.cs">
       <DependentUpon>202001172227039_OneBookingToZeroContracts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001172332564_RemovedContractIdColumnFromBooking.cs" />
+    <Compile Include="Migrations\202001172332564_RemovedContractIdColumnFromBooking.designer.cs">
+      <DependentUpon>202001172332564_RemovedContractIdColumnFromBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
     <Compile Include="Models\Availability\AvailabilityModel.cs" />
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001172227039_OneBookingToZeroContracts.resx">
       <DependentUpon>202001172227039_OneBookingToZeroContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001172332564_RemovedContractIdColumnFromBooking.resx">
+      <DependentUpon>202001172332564_RemovedContractIdColumnFromBooking.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

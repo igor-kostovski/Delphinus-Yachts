@@ -13,7 +13,8 @@ namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
 
             HasKey(x => x.Id);
             Property(x => x.Id)
-                .HasColumnName("BookingId");
+                .HasColumnName("BookingId")
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
         }
     }
 }

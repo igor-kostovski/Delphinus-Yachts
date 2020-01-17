@@ -19,8 +19,7 @@ namespace Delphinus_Yachts.Domain.Models
             get => EnumExtensions.ToString(Status);
             private set => EnumExtensions.ToEnum<BookingStatus>(value);
         }
-
-        public int? ContractId { get; set; }
+        
         public ContractModel Contract { get; set; }
     }
 }
