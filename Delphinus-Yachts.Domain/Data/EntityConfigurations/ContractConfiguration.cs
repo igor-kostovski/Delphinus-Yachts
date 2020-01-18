@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
+﻿using System.Data.Entity.ModelConfiguration;
 using Delphinus_Yachts.Domain.Data.Entities;
 
 namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
@@ -9,12 +8,13 @@ namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
         public ContractConfiguration()
         {
             Ignore(x => x.Type);
-            Property(x => x.TypeAsString).HasColumnName("Type");
+            Property(x => x.TypeAsString)
+                .HasColumnName("Type");
 
-            HasKey(x => x.Id);
-            Property(x => x.Id)
-                .HasColumnName("BookingId")
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            HasKey(x => new {x.Id, x.BookingId});
+
+            HasRequired(x => x.Booking)
+                .WithOptional(x => x.Contract);
         }
     }
 }
