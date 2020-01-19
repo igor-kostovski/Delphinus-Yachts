@@ -194,6 +194,7 @@
     <Compile Include="Api\AvailabilitiesController.cs" />
     <Compile Include="Api\BookingsController.cs" />
     <Compile Include="Api\ContractsController.cs" />
+    <Compile Include="Api\RoutesController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
