@@ -119,9 +119,9 @@
     <Compile Include="Migrations\202001121829082_AddedPriceColumnToContracts.designer.cs">
       <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001182320255_AddedOneToZeroBookingToContract.cs" />
-    <Compile Include="Migrations\202001182320255_AddedOneToZeroBookingToContract.designer.cs">
-      <DependentUpon>202001182320255_AddedOneToZeroBookingToContract.cs</DependentUpon>
+    <Compile Include="Migrations\202001190115075_AddedOneToZeroBookingToContract.cs" />
+    <Compile Include="Migrations\202001190115075_AddedOneToZeroBookingToContract.designer.cs">
+      <DependentUpon>202001190115075_AddedOneToZeroBookingToContract.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="Migrations\202001121829082_AddedPriceColumnToContracts.resx">
       <DependentUpon>202001121829082_AddedPriceColumnToContracts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001182320255_AddedOneToZeroBookingToContract.resx">
-      <DependentUpon>202001182320255_AddedOneToZeroBookingToContract.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202001190115075_AddedOneToZeroBookingToContract.resx">
+      <DependentUpon>202001190115075_AddedOneToZeroBookingToContract.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

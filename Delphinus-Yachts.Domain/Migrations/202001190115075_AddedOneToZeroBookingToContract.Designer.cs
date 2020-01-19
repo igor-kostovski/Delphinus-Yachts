@@ -13,7 +13,7 @@ namespace Delphinus_Yachts.Domain.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202001182320255_AddedOneToZeroBookingToContract"; }
+            get { return "202001190115075_AddedOneToZeroBookingToContract"; }
         }
         
         string IMigrationMetadata.Source

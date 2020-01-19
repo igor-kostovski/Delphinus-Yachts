@@ -11,7 +11,8 @@ namespace Delphinus_Yachts.Domain.Data.EntityConfigurations
             Property(x => x.StatusAsString).HasColumnName("Status");
 
             HasOptional(x => x.Contract)
-                .WithRequired(x => x.Booking);
+                .WithRequired()
+                .WillCascadeOnDelete(true);
         }
     }
 }

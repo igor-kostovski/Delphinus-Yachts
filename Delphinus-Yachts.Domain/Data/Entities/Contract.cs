@@ -1,4 +1,5 @@
-﻿using Delphinus_Yachts.Domain.Data.Enums;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Delphinus_Yachts.Domain.Data.Enums;
 
 namespace Delphinus_Yachts.Domain.Data.Entities
 {
@@ -17,8 +18,5 @@ namespace Delphinus_Yachts.Domain.Data.Entities
             get => Type.ToString();
             private set => Type = value.ToEnum<ContractType>().Value;
         }
-
-        public int BookingId { get; set; }
-        public Booking Booking { get; set; }
     }
 }
