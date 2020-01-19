@@ -10,61 +10,61 @@ using System.Data.Entity;
 
 namespace Delphinus_Yachts.Domain.Services
 {
-    public class RouteService
+    public class LocationService
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
 
-        public RouteService(DataContext context, IMapper mapper)
+        public LocationService(DataContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public DataAndCount<Route> GetAll(TableFilter filter)
+        public DataAndCount<Location> GetAll(TableFilter filter)
         {
-            Expression<Func<Route, bool>> searchRouteNames = x => true;
+            Expression<Func<Location, bool>> searchLocationNames = x => true;
             if (!string.IsNullOrWhiteSpace(filter.Query))
             {
-                searchRouteNames = x => x.Name.Contains(filter.Query);
+                searchLocationNames = x => x.Name.Contains(filter.Query);
             }
 
-            var query = _context.Routes
-                .Where(searchRouteNames)
+            var query = _context.Locations
+                .Where(searchLocationNames)
                 .OrderBy(x => x.Id)
                 .Skip((filter.Page - 1) * filter.Limit)
                 .Take(filter.Limit);
 
-            return new DataAndCount<Route>
+            return new DataAndCount<Location>
             {
                 Data = query.ToList(),
-                Count = _context.Routes.Count()
+                Count = _context.Locations.Count()
             };
         }
 
-        public RouteModel Get(int id)
+        public LocationModel Get(int id)
         {
-            var entity = _context.Routes
-                .Include(x => x.Locations)
+            var entity = _context.Locations
+                .Include(x => x.Routes)
                 .SingleOrDefault(x => x.Id == id);
 
-            return _mapper.Map<RouteModel>(entity);
+            return _mapper.Map<LocationModel>(entity);
         }
 
-        public RouteModel Create(RouteModel model)
+        public LocationModel Create(LocationModel model)
         {
-            var entity = _mapper.Map<Route>(model);
+            var entity = _mapper.Map<Location>(model);
 
-            _context.Routes.Add(entity);
+            _context.Locations.Add(entity);
             _context.SaveChanges();
 
             model.Id = entity.Id;
             return model;
         }
 
-        public RouteModel Update(RouteModel model)
+        public LocationModel Update(LocationModel model)
         {
-            var entity = _context.Routes.SingleOrDefault(x => x.Id == model.Id);
+            var entity = _context.Locations.SingleOrDefault(x => x.Id == model.Id);
 
             _mapper.Map(model, entity);
             _context.SaveChanges();
@@ -74,9 +74,9 @@ namespace Delphinus_Yachts.Domain.Services
 
         public void Delete(int id)
         {
-            var entity = _context.Routes.SingleOrDefault(x => x.Id == id);
+            var entity = _context.Locations.SingleOrDefault(x => x.Id == id);
 
-            _context.Routes.Remove(entity);
+            _context.Locations.Remove(entity);
             _context.SaveChanges();
         }
     }
