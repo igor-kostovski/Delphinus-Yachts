@@ -21,6 +21,7 @@ namespace Delphinus_Yachts.Domain.Data
         {
             modelBuilder.Configurations.Add(new BookingConfiguration());
             modelBuilder.Configurations.Add(new ContractConfiguration());
+            modelBuilder.Configurations.Add(new RouteConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

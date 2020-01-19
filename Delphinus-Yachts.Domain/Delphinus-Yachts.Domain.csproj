@@ -101,6 +101,7 @@
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
     <Compile Include="Data\EntityConfigurations\ContractConfiguration.cs" />
+    <Compile Include="Data\EntityConfigurations\RouteConfiguration.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />
     <Compile Include="Data\Enums\ContractType.cs" />
     <Compile Include="Data\Enums\EnumExtensions.cs" />
@@ -132,6 +133,10 @@
     <Compile Include="Migrations\202001191034566_AddedLocationsTable.cs" />
     <Compile Include="Migrations\202001191034566_AddedLocationsTable.designer.cs">
       <DependentUpon>202001191034566_AddedLocationsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.cs" />
+    <Compile Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.designer.cs">
+      <DependentUpon>202001191042296_AddedManyToManyRouteToLocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
@@ -176,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001191034566_AddedLocationsTable.resx">
       <DependentUpon>202001191034566_AddedLocationsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.resx">
+      <DependentUpon>202001191042296_AddedManyToManyRouteToLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
