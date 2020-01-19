@@ -204,13 +204,17 @@
     <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Automapper\Profiles\ContractProfile.cs" />
+    <Compile Include="Automapper\Profiles\LocationProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
+    <Compile Include="Automapper\Profiles\RouteProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
     <Compile Include="DTOs\AvailabilityDTO.cs" />
     <Compile Include="DTOs\BookingDTO.cs" />
     <Compile Include="DTOs\ContractDTO.cs" />
+    <Compile Include="DTOs\LocationDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\RouteDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
