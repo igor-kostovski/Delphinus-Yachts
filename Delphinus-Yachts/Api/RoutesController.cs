@@ -29,9 +29,9 @@ namespace Delphinus_Yachts.Api
         [HttpGet]
         public IHttpActionResult Get(int id)
         {
-            var booking = _routeService.Get(id);
+            var route = _routeService.Get(id);
 
-            return Ok(_mapper.Map<RouteDTO>(booking));
+            return Ok(_mapper.Map<RouteDTO>(route));
         }
 
         [HttpPost]

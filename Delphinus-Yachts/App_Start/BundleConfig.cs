@@ -60,6 +60,16 @@ namespace Delphinus_Yachts
             bundles.Add(new ScriptBundle("~/bundles/contracts/Edit").Include(
                 "~/Client/Src/ViewModels/Contract/edit.vm.js"
             ));
+
+            bundles.Add(new ScriptBundle("~/bundles/routes/Index").Include(
+                "~/Client/Src/ViewModels/Route/list.vm.js",
+                "~/Client/Src/Components/SearchBox.vm.js"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/locations/Index").Include(
+                "~/Client/Src/ViewModels/Location/list.vm.js",
+                "~/Client/Src/Components/SearchBox.vm.js"
+            ));
         }
     }
 }
