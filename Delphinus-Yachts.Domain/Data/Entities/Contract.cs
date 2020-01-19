@@ -1,5 +1,4 @@
-﻿using System;
-using Delphinus_Yachts.Domain.Data.Enums;
+﻿using Delphinus_Yachts.Domain.Data.Enums;
 
 namespace Delphinus_Yachts.Domain.Data.Entities
 {

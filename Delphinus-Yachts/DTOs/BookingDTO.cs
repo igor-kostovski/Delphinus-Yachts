@@ -11,7 +11,8 @@ namespace Delphinus_Yachts.DTOs
         public DateTime EndDate { get; set; }
         public string StartLocation { get; set; }
         public string EndLocation { get; set; }
-
         public string Status { get; set; }
+        
+        public ContractDTO Contract { get; set; }
     }
 }
