@@ -92,13 +92,18 @@
     <Compile Include="Automapper\Profiles\AvailabilityProfile.cs" />
     <Compile Include="Automapper\Profiles\BookingProfile.cs" />
     <Compile Include="Automapper\Profiles\ContractProfile.cs" />
+    <Compile Include="Automapper\Profiles\LocationProfile.cs" />
+    <Compile Include="Automapper\Profiles\RouteProfile.cs" />
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Entities\Booking.cs" />
     <Compile Include="Data\Entities\Contract.cs" />
+    <Compile Include="Data\Entities\Location.cs" />
     <Compile Include="Data\Entities\Role.cs" />
+    <Compile Include="Data\Entities\Route.cs" />
     <Compile Include="Data\Entities\User.cs" />
     <Compile Include="Data\EntityConfigurations\BookingConfiguration.cs" />
     <Compile Include="Data\EntityConfigurations\ContractConfiguration.cs" />
+    <Compile Include="Data\EntityConfigurations\RouteConfiguration.cs" />
     <Compile Include="Data\Enums\BookingStatus.cs" />
     <Compile Include="Data\Enums\ContractType.cs" />
     <Compile Include="Data\Enums\EnumExtensions.cs" />
@@ -123,12 +128,26 @@
     <Compile Include="Migrations\202001190115075_AddedOneToZeroBookingToContract.designer.cs">
       <DependentUpon>202001190115075_AddedOneToZeroBookingToContract.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001191032232_AddedRoutesTable.cs" />
+    <Compile Include="Migrations\202001191032232_AddedRoutesTable.designer.cs">
+      <DependentUpon>202001191032232_AddedRoutesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001191034566_AddedLocationsTable.cs" />
+    <Compile Include="Migrations\202001191034566_AddedLocationsTable.designer.cs">
+      <DependentUpon>202001191034566_AddedLocationsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.cs" />
+    <Compile Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.designer.cs">
+      <DependentUpon>202001191042296_AddedManyToManyRouteToLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Availability\AvailabilityFilter.cs" />
     <Compile Include="Models\Availability\AvailabilityModel.cs" />
     <Compile Include="Models\BookingModel.cs" />
     <Compile Include="Models\ContractModel.cs" />
+    <Compile Include="Models\LocationModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\RouteModel.cs" />
     <Compile Include="Models\Table\DataAndCount.cs" />
     <Compile Include="Models\Table\TableFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +155,8 @@
     <Compile Include="Services\AvailabilityService.cs" />
     <Compile Include="Services\BookingService.cs" />
     <Compile Include="Services\ContractService.cs" />
+    <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\RouteService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +181,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001190115075_AddedOneToZeroBookingToContract.resx">
       <DependentUpon>202001190115075_AddedOneToZeroBookingToContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191032232_AddedRoutesTable.resx">
+      <DependentUpon>202001191032232_AddedRoutesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191034566_AddedLocationsTable.resx">
+      <DependentUpon>202001191034566_AddedLocationsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001191042296_AddedManyToManyRouteToLocation.resx">
+      <DependentUpon>202001191042296_AddedManyToManyRouteToLocation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

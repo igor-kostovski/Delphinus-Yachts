@@ -14,11 +14,14 @@ namespace Delphinus_Yachts.Domain.Data
 
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Contract> Contracts { get; set; }
+        public DbSet<Route> Routes { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new BookingConfiguration());
             modelBuilder.Configurations.Add(new ContractConfiguration());
+            modelBuilder.Configurations.Add(new RouteConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

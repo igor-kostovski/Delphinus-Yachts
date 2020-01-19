@@ -46,6 +46,16 @@
         name: "discount"
     }];
 
+    constants.locationListColumns = [{
+        label: 'Name',
+        name: 'name'
+    }];
+
+    constants.routeListColumns = [{
+        label: 'Name',
+        name: 'name'
+    }];
+
     constants.tableConfig = {
         pagination: false,
         card_mode: false,
