@@ -241,6 +241,7 @@
     <Content Include="Client\Src\ViewModels\Contract\list.vm.js" />
     <Content Include="Client\Src\ViewModels\Location\list.vm.js" />
     <Content Include="Client\Src\ViewModels\Route\list.vm.js" />
+    <Content Include="Client\Src\ViewModels\Statistics\statistics.vm.js" />
     <Content Include="Content\bootstrap-iso.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -2037,6 +2038,7 @@
     <Content Include="Views\Mvc\Contracts\Edit.cshtml" />
     <Content Include="Views\Mvc\Locations\Index.cshtml" />
     <Content Include="Views\Mvc\Routes\Index.cshtml" />
+    <Content Include="Views\Mvc\Statistics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

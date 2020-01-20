@@ -70,6 +70,10 @@ namespace Delphinus_Yachts
                 "~/Client/Src/ViewModels/Location/list.vm.js",
                 "~/Client/Src/Components/SearchBox.vm.js"
             ));
+
+            bundles.Add(new ScriptBundle("~/bundles/statistics/Index").Include(
+                "~/Client/Src/ViewModels/Statistics/statistics.vm.js"
+            ));
         }
     }
 }

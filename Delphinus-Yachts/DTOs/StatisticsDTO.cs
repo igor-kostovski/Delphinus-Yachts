@@ -6,7 +6,7 @@ namespace Delphinus_Yachts.DTOs
     {
         public double MonthlyEarnings { get; set; }
         public double AnnualEarnings { get; set; }
-        public int TotalNumberOfPassengers { get; set; }
+        public double DoneBookingsPercentage { get; set; }
         public CountByStatus CountByStatus { get; set; }
     }
 }

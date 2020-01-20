@@ -1,9 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 using AutoMapper;
 using Delphinus_Yachts.Domain.Data;
-using Delphinus_Yachts.Domain.Data.Enums;
+using Delphinus_Yachts.Domain.Data.Entities;
 using Delphinus_Yachts.Domain.Models;
 using Delphinus_Yachts.Domain.Models.Statistics;
+using System.Data.Entity;
 
 namespace Delphinus_Yachts.Domain.Services
 {
@@ -20,33 +23,51 @@ namespace Delphinus_Yachts.Domain.Services
 
         public StatisticsModel Get()
         {
+            Expression<Func<Booking, bool>> yearFilter = x => x.StartDate.Year == DateTime.Now.Year;
+
             var annualEarnings = _context
-                .Contracts
-                .Sum(x => x.Price);
+                .Bookings
+                .Include(x => x.Contract)
+                .Where(yearFilter)
+                .Sum(x => x.Contract.Price);
 
             var monthlyEarnings = annualEarnings / 12;
 
-            var totalPassengersNumber = _context
+            var doneBookings = _context
                 .Bookings
-                .Sum(x => 200);
+                .Where(yearFilter)
+                .Where(x => x.StatusAsString == "Complete")
+                .Count(x => x.EndDate <= DateTime.Now);
+
+            var doneBookingsPercentage = (double)doneBookings / _context
+                                                    .Bookings
+                                                    .Where(yearFilter)
+                                                    .Where(x => x.StatusAsString == "Complete")
+                                                    .Count() * 100;
 
             var bookingsByStatus = _context
                 .Bookings
-                .GroupBy(x => x.Status);
+                .Where(yearFilter)
+                .GroupBy(x => x.StatusAsString)
+                .Select(x => new
+                {
+                    x.Key,
+                    Count = x.Count()
+                });
 
             var countByStatus = new CountByStatus
             {
-                CompleteBookingsNumber = bookingsByStatus.Count(x => x.Key == BookingStatus.Complete),
-                OptionalBookingsNumber = bookingsByStatus.Count(x => x.Key == BookingStatus.Optional),
-                CancelledBookingsNumber = bookingsByStatus.Count(x => x.Key == BookingStatus.Cancelled)
+                CompleteBookingsNumber = bookingsByStatus.SingleOrDefault(x => x.Key == "Complete").Count,
+                OptionalBookingsNumber = bookingsByStatus.SingleOrDefault(x => x.Key == "Optional").Count,
+                CancelledBookingsNumber = bookingsByStatus.SingleOrDefault(x => x.Key == "Cancelled").Count
             };
 
             return new StatisticsModel
             {
-                AnnualEarnings = annualEarnings,
-                MonthlyEarnings = monthlyEarnings,
-                TotalNumberOfPassengers = totalPassengersNumber,
-                CountByStatus = countByStatus
+                AnnualEarnings = Math.Round(annualEarnings,2),
+                MonthlyEarnings = Math.Round(monthlyEarnings,2),
+                CountByStatus = countByStatus,
+                DoneBookingsPercentage = Math.Round(doneBookingsPercentage,2)
             };
         }
     }
