@@ -226,8 +226,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\Dependencies\Scripts\chart.min.js" />
     <Content Include="Client\Dependencies\Scripts\datepicker.min.js" />
     <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
+    <Content Include="Client\Src\Components\AreaChart.vm.js" />
     <Content Include="Client\Src\Components\Calendar.vm.js" />
     <Content Include="Client\Src\Components\Datepicker.vm.js" />
     <Content Include="Client\Src\Components\SearchBox.vm.js" />
