@@ -196,6 +196,7 @@
     <Compile Include="Api\ContractsController.cs" />
     <Compile Include="Api\LocationsController.cs" />
     <Compile Include="Api\RoutesController.cs" />
+    <Compile Include="Api\StatisticsController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Automapper\Profiles\LocationProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
     <Compile Include="Automapper\Profiles\RouteProfile.cs" />
+    <Compile Include="Automapper\Profiles\StatisticsProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
     <Compile Include="DTOs\AvailabilityDTO.cs" />
@@ -217,6 +219,7 @@
     <Compile Include="DTOs\LocationDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="DTOs\RouteDTO.cs" />
+    <Compile Include="DTOs\StatisticsDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
