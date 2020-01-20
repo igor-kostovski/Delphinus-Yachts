@@ -148,6 +148,8 @@
     <Compile Include="Models\LocationModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RouteModel.cs" />
+    <Compile Include="Models\Statistics\CountByStatus.cs" />
+    <Compile Include="Models\Statistics\StatisticsModel.cs" />
     <Compile Include="Models\Table\DataAndCount.cs" />
     <Compile Include="Models\Table\TableFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Services\ContractService.cs" />
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\RouteService.cs" />
+    <Compile Include="Services\StatisticsService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
