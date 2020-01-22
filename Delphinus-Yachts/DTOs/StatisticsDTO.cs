@@ -1,4 +1,5 @@
-﻿using Delphinus_Yachts.Domain.Models.Statistics;
+﻿using System.Collections.Generic;
+using Delphinus_Yachts.Domain.Models.Statistics;
 
 namespace Delphinus_Yachts.DTOs
 {
@@ -8,5 +9,6 @@ namespace Delphinus_Yachts.DTOs
         public double AnnualEarnings { get; set; }
         public double DoneBookingsPercentage { get; set; }
         public CountByStatus CountByStatus { get; set; }
+        public Dictionary<string, double> EarningsPerMonth { get; set; }
     }
 }

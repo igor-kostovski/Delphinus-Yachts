@@ -1,14 +1,20 @@
 ﻿(function () {
     var areaChart = {
         template: `<canvas :ref="chartName"></canvas>`,
-        props: ["chart-name"],
+        props: ["chart-name", "earnings-per-month"],
+        data() {
+            return {
+                months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+            }
+        },
         methods: {
             init() {
                 var ctx = this.$refs[this.chartName];
+                var vm = this;
                 var myLineChart = new Chart(ctx, {
                     type: 'line',
                     data: {
-                        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                        labels: vm.months,
                         datasets: [{
                             label: "Earnings",
                             lineTension: 0.3,
@@ -22,7 +28,7 @@
                             pointHoverBorderColor: "rgba(78, 115, 223, 1)",
                             pointHitRadius: 10,
                             pointBorderWidth: 2,
-                            data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+                            data: [...vm.months.map(x => vm.earningsPerMonth[x.toLowerCase()])]
                         }],
                     },
                     options: {
