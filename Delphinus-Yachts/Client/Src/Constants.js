@@ -85,5 +85,4 @@
             hoveredInRange: '#212529'
         }
     };
-
 })(window, window.constants = window.constants || {});

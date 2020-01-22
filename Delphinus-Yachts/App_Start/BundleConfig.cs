@@ -17,7 +17,8 @@ namespace Delphinus_Yachts
                 "~/Client/Dependencies/Scripts/axios.min.js",
                 "~/Client/Dependencies/Scripts/vue-bootstrap4-table.min.js",
                 "~/Client/Dependencies/Scripts/moment.min.js",
-                "~/Client/Dependencies/Scripts/datepicker.min.js"
+                "~/Client/Dependencies/Scripts/datepicker.min.js",
+                "~/Client/Dependencies/Scripts//chart.min.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/style-scripts").Include(
@@ -69,6 +70,11 @@ namespace Delphinus_Yachts
             bundles.Add(new ScriptBundle("~/bundles/locations/Index").Include(
                 "~/Client/Src/ViewModels/Location/list.vm.js",
                 "~/Client/Src/Components/SearchBox.vm.js"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/statistics/Index").Include(
+                "~/Client/Src/ViewModels/Statistics/statistics.vm.js",
+                "~/Client/Src/Components/AreaChart.vm.js"
             ));
         }
     }

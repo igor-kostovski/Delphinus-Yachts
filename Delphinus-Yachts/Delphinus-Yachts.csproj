@@ -196,6 +196,7 @@
     <Compile Include="Api\ContractsController.cs" />
     <Compile Include="Api\LocationsController.cs" />
     <Compile Include="Api\RoutesController.cs" />
+    <Compile Include="Api\StatisticsController.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Automapper\Profiles\LocationProfile.cs" />
     <Compile Include="Automapper\Profiles\LoginProfile.cs" />
     <Compile Include="Automapper\Profiles\RouteProfile.cs" />
+    <Compile Include="Automapper\Profiles\StatisticsProfile.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\MvcController.cs" />
     <Compile Include="DTOs\AvailabilityDTO.cs" />
@@ -217,14 +219,17 @@
     <Compile Include="DTOs\LocationDTO.cs" />
     <Compile Include="DTOs\LoginDTO.cs" />
     <Compile Include="DTOs\RouteDTO.cs" />
+    <Compile Include="DTOs\StatisticsDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client\Dependencies\Scripts\chart.min.js" />
     <Content Include="Client\Dependencies\Scripts\datepicker.min.js" />
     <Content Include="Client\Dependencies\Scripts\vue-bootstrap4-table.min.js" />
+    <Content Include="Client\Src\Components\AreaChart.vm.js" />
     <Content Include="Client\Src\Components\Calendar.vm.js" />
     <Content Include="Client\Src\Components\Datepicker.vm.js" />
     <Content Include="Client\Src\Components\SearchBox.vm.js" />
@@ -238,6 +243,7 @@
     <Content Include="Client\Src\ViewModels\Contract\list.vm.js" />
     <Content Include="Client\Src\ViewModels\Location\list.vm.js" />
     <Content Include="Client\Src\ViewModels\Route\list.vm.js" />
+    <Content Include="Client\Src\ViewModels\Statistics\statistics.vm.js" />
     <Content Include="Content\bootstrap-iso.css" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
@@ -2034,6 +2040,7 @@
     <Content Include="Views\Mvc\Contracts\Edit.cshtml" />
     <Content Include="Views\Mvc\Locations\Index.cshtml" />
     <Content Include="Views\Mvc\Routes\Index.cshtml" />
+    <Content Include="Views\Mvc\Statistics\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
