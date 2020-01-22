@@ -25,7 +25,7 @@ namespace Delphinus_Yachts.Domain.Services
 
         public StatisticsModel Get()
         {
-            Expression<Func<Booking, bool>> yearFilter = x => x.StartDate.Year == 2019;/*DateTime.Now.Year;*/
+            Expression<Func<Booking, bool>> yearFilter = x => x.StartDate.Year == DateTime.Now.Year;
 
             var annualEarnings = _context
                 .Bookings
