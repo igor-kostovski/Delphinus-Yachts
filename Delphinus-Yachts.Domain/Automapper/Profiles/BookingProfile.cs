@@ -8,7 +8,9 @@ namespace Delphinus_Yachts.Domain.Automapper.Profiles
     {
         public BookingProfile()
         {
-            CreateMap<Booking, BookingModel>().ReverseMap();
+            CreateMap<Booking, BookingModel>()
+                .ReverseMap()
+                .ForMember(dest => dest.Contract, opt => opt.Ignore());
         }
     }
 }
