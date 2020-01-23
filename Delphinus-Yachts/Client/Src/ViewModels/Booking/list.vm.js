@@ -11,8 +11,7 @@
                 per_page: 10,
                 page: 1,
             },
-            isTableSetup: false,
-            activePaginationButton: {}
+            isTableSetup: false
         },
         methods: {
             getTableData(searchText = null) {
