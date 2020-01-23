@@ -8,18 +8,20 @@
                 startDate: '',
                 endDate: ''
             },
-            isNew: true
+            isNew: true,
+            isLoading: true
         },
         methods: {
             init: function () {
                 axios.get(baseUrl + "api/bookings/" + this.booking.id).then((res) => {
                     this.booking = res.data;
                     this.isNew = false;
+                    this.isLoading = false;
                 });
             },
             save: function () {
                 if (!this.isNew)
-                    axios.put(baseUrl + "api/bookings", this.booking);
+                    axios.put(baseUrl + "api/bookings", this.booking).then(() => location.reload());
                 else
                     axios.post(baseUrl + "api/bookings", this.booking).then((res) => {
                         window.location.href += `/${res.data}`;
@@ -37,6 +39,7 @@
                 setTimeout(function () {
                     vm.booking.startDate = currentDate.toISOString().slice(0, 10);
                     vm.booking.endDate = (new Date(currentDate.setDate(currentDate.getDate() + 7))).toISOString().slice(0, 10);
+                    vm.isLoading = false;
                 }, 50);
             }
         },

@@ -12,67 +12,74 @@
             <button class="btn btn-primary btn-sm" v-on:click="save">Save</button>
         </div>
     </div>
-    <div class="row" style="justify-content: center">
-        <div class="col-xl-6 col-lg-6 col-sm-6">
-            <div class="card mb-4">
-                <div class="card-header theme-background">
-                    Basic info
-                </div>
-                <div class="card-body">
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>Paying passenger</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <input placeholder="Enter full name" class="text-input" type="text" v-model="contract.payingPassenger" />
-                        </div>
+    <div v-if="isLoading" class="d-flex justify-content-center">
+        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div v-else class="content">
+        <div class="row" style="justify-content: center">
+            <div class="col-xl-6 col-lg-6 col-sm-6">
+                <div class="card mb-4">
+                    <div class="card-header theme-background">
+                        Basic info
                     </div>
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>Price</label>
+                    <div class="card-body">
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>Paying passenger</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input placeholder="Enter full name" class="text-input" type="text" v-model="contract.payingPassenger" />
+                            </div>
                         </div>
-                        <div class="form-group col-lg-3">
-                            <input placeholder="Enter price" class="text-input" type="number" v-model="contract.price" />
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>Price</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input placeholder="Enter price" class="text-input" type="number" v-model="contract.price" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>Discount(percentage)</label>
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>Discount(percentage)</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input placeholder="Enter discount" class="text-input" type="number" v-model="contract.discount" />
+                            </div>
                         </div>
-                        <div class="form-group col-lg-3">
-                            <input placeholder="Enter discount" class="text-input" type="number" v-model="contract.discount" />
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>Contract type</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <select class="select" v-model="contract.type">
+                                    <option :value="undefined" disabled>Select type</option>
+                                    <option 
+                                        v-for="type in Object.keys(enums.contractType)" 
+                                        :value="enums.contractType[type]"
+                                    >
+                                        {{ enums.contractType[type] }}
+                                    </option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>Contract type</label>
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>APA</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input placeholder="Enter APA" class="text-input" type="number" v-model="contract.apa" />
+                            </div>
                         </div>
-                        <div class="form-group col-lg-3">
-                            <select class="select" v-model="contract.type">
-                                <option :value="undefined" disabled>Select type</option>
-                                <option 
-                                    v-for="type in Object.keys(enums.contractType)" 
-                                    :value="enums.contractType[type]"
-                                >
-                                    {{ enums.contractType[type] }}
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>APA</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <input placeholder="Enter APA" class="text-input" type="number" v-model="contract.apa" />
-                        </div>
-                    </div>
-                    <div class="row" style="justify-content: center">
-                        <div class="form-group col-lg-4">
-                            <label>Tax(percentage)</label>
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <input placeholder="Enter tax" class="text-input" type="number" v-model="contract.tax"/>
+                        <div class="row" style="justify-content: center">
+                            <div class="form-group col-lg-4">
+                                <label>Tax(percentage)</label>
+                            </div>
+                            <div class="form-group col-lg-3">
+                                <input placeholder="Enter tax" class="text-input" type="number" v-model="contract.tax"/>
+                            </div>
                         </div>
                     </div>
                 </div>
