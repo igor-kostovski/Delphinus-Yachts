@@ -303,8 +303,6 @@ __pycache__/
 # Tabs Studio
 *.tss
 
-# Telerik's JustMock configuration file
-*.jmconfig
 
 # BizTalk build output
 *.btp.cs
@@ -312,29 +310,7 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-# OpenCover UI analysis results
-OpenCover/
 
-# Azure Stream Analytics local run output 
-ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
-
-# BoatBikeTours
-src/.vs/**
-!**/appSettings.config
-!**/connectionStrings.config
-
-# Build and Deployment
-!**/nuget.exe
-build/**
-!tools/aws-tools/**
-tools/aws-tools/**/obj/**
-tools/aws-tools/packages/**
-tools/aws-tools/.vs/AWSDeployment/v15/.suo
-tools/aws-tools/.vs/**
-!lib/**
-**/*.orig
-/src/Typeqast.BBT.BackOfficeWeb/logs
-src/Typeqast.BBT.Api/logs/log.txt
