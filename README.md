@@ -1,2 +1,2 @@
 # Delphinus-Yachts
-Booking tracking system that provides users with easier managing and organizing of their yacht business
+This project forms practical part of my seminar paper in subject ‘Software Engineering’. I created a web app that enables its users to manage bookings of imaginary yacht charterer ‘Delphinus Yachts’. Users can create bookings and following contracts, connect bookings with certain routes which consists of various locations, add new routes and locations to the database, check yacht availability, check business summary and statistics in terms of number of completed/cancelled bookings, etc. It’s created using .NET framework, ASP.NET MVC, Entity Framework and MSSQL. 
